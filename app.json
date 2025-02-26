@@ -9,18 +9,25 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+    "NSCameraUsageDescription": "Esta aplicación necesita acceso a la cámara para la transmisión de video.",
+    "NSMicrophoneUsageDescription": "Esta aplicación necesita acceso al micrófono para la transmisión de audio."
+  }
     },
     "android": {
+      "package": "com.ivan.babymonitor",
+      "permissions": [
+    "android.permission.CAMERA",
+    "android.permission.RECORD_AUDIO"
+  ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "bundler": "metro"
     },
     "plugins": [
       "expo-router",
